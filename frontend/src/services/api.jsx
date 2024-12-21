@@ -7,7 +7,7 @@ export const uploadImage = async (file) => {
   const formData = new FormData();
   formData.append('file', file);
 
-  const response = await fetch(`${API_URL}/api/upload`, {
+  const response = await fetch(`${API_URL}api/upload`, {
     method: 'POST',
     body: formData,
   });
@@ -22,7 +22,7 @@ export const uploadMask = async (imageId, maskBlob) => {
   const formData = new FormData();
   formData.append('file', maskBlob);
 
-  const response = await fetch(`${API_URL}/api/upload/${imageId}/mask`, {
+  const response = await fetch(`${API_URL}api/upload/${imageId}/mask`, {
     method: 'POST',
     body: formData,
   });
@@ -30,6 +30,6 @@ export const uploadMask = async (imageId, maskBlob) => {
 };
 
 export const getImage = async (imageId) => {
-  const response = await fetch(`${API_URL}/api/images/${imageId}`);
+  const response = await fetch(`${API_URL}api/images/${imageId}`);
   return response.json();
 };
