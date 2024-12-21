@@ -1,3 +1,4 @@
+
 import { API_URL } from '../config';
 
 export const uploadImage = async (file) => {
