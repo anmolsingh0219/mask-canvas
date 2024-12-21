@@ -1,5 +1,7 @@
 
-import { API_URL } from '../config';
+// import { API_URL } from '../config';
+
+const API_URL = "https://mask-canvas-production.up.railway.app/";
 
 export const uploadImage = async (file) => {
   const formData = new FormData();
