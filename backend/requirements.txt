@@ -4,3 +4,4 @@ boto3
 sqlalchemy
 python-dotenv
 pydantic-settings
+python-multipart
