@@ -275,10 +275,6 @@ app.add_middleware(
 4. Push to branch
 5. Create Pull Request
 
-## License
-
-[Your chosen license]
-
 ---
 
 This backend documentation provides a comprehensive guide for setting up and running the service. For production deployment, additional security measures and optimizations should be implemented.
