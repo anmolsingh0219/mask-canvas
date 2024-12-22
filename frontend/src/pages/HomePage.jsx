@@ -10,6 +10,7 @@ const Homepage = () => {
     setImage(null);
   };
 
+
   return (
     <div className="min-h-screen bg-[#1a1a27] p-6">
       <div className="flex justify-between items-center mb-8">
@@ -36,6 +37,7 @@ const Homepage = () => {
           <DrawingCanvas 
             image={image} 
             onChangeImage={handleChangeImage}
+            onMaskGenerated={() => {}}
           />
         )}
       </div>

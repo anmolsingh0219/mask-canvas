@@ -78,8 +78,9 @@ const DrawingCanvas = ({ image, onChangeImage, onMaskGenerated }) => {
       const blob = await response.blob();
 
       const result = await uploadMask(image.id, blob);
+      console.log("Mask URL:", result.mask_url);
       onMaskGenerated(result.mask_url);
-
+      
       const now = new Date();
       const dateString = now.toISOString()
         .replace(/[:.]/g, '-')
