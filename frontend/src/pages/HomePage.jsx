@@ -37,7 +37,6 @@ const Homepage = () => {
           <DrawingCanvas 
             image={image} 
             onChangeImage={handleChangeImage}
-            onMaskGenerated={() => {}}
           />
         )}
       </div>

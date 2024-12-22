@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Pencil, Trash2, Download, ImagePlus } from "lucide-react";
 import { uploadMask } from '../services/api';
 
-const DrawingCanvas = ({ image, onChangeImage, onMaskGenerated }) => {
+const DrawingCanvas = ({ image, onChangeImage }) => {
   const canvasRef = useRef(null);
   const canvasContainerRef = useRef(null);
   const [brushSize, setBrushSize] = useState(5);
@@ -78,9 +78,8 @@ const DrawingCanvas = ({ image, onChangeImage, onMaskGenerated }) => {
       const blob = await response.blob();
 
       const result = await uploadMask(image.id, blob);
-      console.log("Mask URL:", result.mask_url);
-      onMaskGenerated(result.mask_url);
-      
+      console.log('Mask uploaded:', result);
+
       const now = new Date();
       const dateString = now.toISOString()
         .replace(/[:.]/g, '-')
